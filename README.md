@@ -10,7 +10,13 @@ Github webhook event push to google calendar management web service
 
 ## Requirements
 
-## Analysis
+- github webhook을 등록해서 issue에 대한 이벤트 알림을 받을 준비를 한다.
+- webhook을 받아서 처리할 API 서버를 구현한다.
+  - 새로운 issue를 등록할 때 그 issue에 포함된 assignees가 누구인지 파악한다.
+  - 혹은 기존 issue에 assignee가 등록되거나 삭제 되면 누구인지 파악한다.
+- webhook을 받아서 처리하는 API 서버는 assignee가 누구인지 파악이 되면 google calendar API를 통해
+  - 공개 캘린더인 `Mentoring schedule`에 caneldar event 생성 후 attendees 추가
+  - 이미 생성된 calendar event라면 attendees 등록 혹은 삭제
 
 ### Studied pre-requirements
 
