@@ -27,6 +27,32 @@ Github webhook event push to google calendar management web service
 
 ## Design
 
+### Use case
+
+그림 나중에 추가 예정
+
+- User: Set up Webhook settings to issues
+  - Set up one time
+  - Webhook address is `WebhookToCalendar` serivce address (POST)
+- User: Check out google calendar event
+  - `WebhookToCalendar` service set to google calendar event attendees from github issue assignee
+
+### Data flow
+
+### Data definition
+
+#### Webhooks payload
+
+Reference:
+https://docs.github.com/en/developers/webhooks-and-events/webhook-events-and-payloads#issues
+
+What data use:
+
+1. check out payload.action === "assigned" or payload.action == "unassigned"
+2. payload.issue.assignee.login
+
+### Github API
+
 ## Skill keyword
 
 - Github webhook
