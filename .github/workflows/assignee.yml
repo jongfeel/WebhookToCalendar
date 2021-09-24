@@ -21,7 +21,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          # Expected 'issue'
+          # Expected 'issues'
           echo ${{ github.event_name }}
           # Expected 'assigned' or 'unassigned'
           echo ${{ github.event.action }}
