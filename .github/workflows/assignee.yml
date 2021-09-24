@@ -20,7 +20,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo assigned!
+        run: echo ${{ github.event_name }}
         if: github.event_name == 'assigned'
 
       - name: Run finish
