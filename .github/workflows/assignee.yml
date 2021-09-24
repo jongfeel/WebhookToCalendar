@@ -25,6 +25,7 @@ jobs:
           echo ${{ github.event_name }}
           # Expected 'assigned' or 'unassigned'
           echo ${{ github.event.action }}
+          echo ${{ github.actor }}
         # if: github.event_name == 'issue'
 
       - name: Run finish
